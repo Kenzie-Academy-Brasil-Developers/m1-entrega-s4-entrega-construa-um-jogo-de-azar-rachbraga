@@ -17,3 +17,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.mostrarPalavras{
+    margin: 20px auto;
+    border: 1px solid black;
+    width: 200px;
+
+}
