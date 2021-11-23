@@ -1,0 +1,19 @@
+#container{
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+}
+
+#container div{
+    width: 55px;
+    height: 35px;
+    border: 1px solid black;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
