@@ -57,14 +57,12 @@ const map = [
 function empurrar(palavra, x, y) {
     for (let i = 0; i < palavra.length; i++) {
         map[x][y] = palavra[i];
+        
         y++;
     }
 }
 
 let varControl = palavrasAleatorias(arrayPalavras);
-console.log(Object.values(varControl))
-console.log(varControl[0])
-
 
 function adicionarPalavras() {
 
@@ -107,6 +105,7 @@ function palavrasSelecionadas() {
 }
 palavrasSelecionadas()
 
+// Construção do array
 const buildLinha = (linhaAtual, linha) => {
 
     for (let coluna = 0; coluna < linhaAtual.length; coluna++) {
@@ -123,8 +122,8 @@ const buildLinha = (linhaAtual, linha) => {
 
             div.classList.add('letrasCorretas');
             div.innerText = valorAtual.toUpperCase();
-            div.setAttribute('coluna', coluna);
-            div.setAttribute('linha', linha);
+            // div.setAttribute('coluna', coluna);
+            // div.setAttribute('linha', linha);
 
             div.style.backgroundColor = 'red';
         }
@@ -144,52 +143,22 @@ buildMap();
 
 //5 - Informar ao usuário quando a palavra for clicada
 
-// const winGame = document.;
-// console.log(winGame)
-
-
-// const endGame = () => {
-
-
-
-// }
-
-
+let counter = 0;
 
 const eventOnClick = (e) => {
-    // let lengthControl = varControl.toString().length - 2;
-    // console.log(lengthControl);
+    
     const target = e.target;
-    // counterClick();
+    let lengthControl = varControl.toString().length - 2;
+    
+
     if (target.classList.contains('letrasCorretas')) {
         target.style.backgroundColor = 'lightgreen';
-
+        counter++;
+        if(lengthControl === counter){
+            alert('Você ganhou!')
+        }
+        
     }
-
-    let count = [];
-    count.push(1);
-    console.log(count);
-
-    // if (count === lengthControl) {
-    //     alert('Funcionou!')
-    // }
-
 }
+
 divContainer.addEventListener('click', eventOnClick);
-
-function counterClick(eventOnClick) {
-    const classControl = document.getElementsByClassName('letrasCorretas');
-    console.log(classControl);
-    classControl.forEach(element => {
-        element.addEventListener('click', eventOnClick);
-
-    });
-
-    // const target = e.target;
-    // for (let i = 0; i < lengthControl; i++) {
-    //     count += 1;
-    //     console.log(count);
-    // }
-}
-
-
