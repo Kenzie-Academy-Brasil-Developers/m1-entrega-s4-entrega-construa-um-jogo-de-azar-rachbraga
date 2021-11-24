@@ -1,8 +1,3 @@
-// Definir um array de 20 palavras com menos de 10 letras cada;
-// Fazer com que 3 palavras sejam colocadas aleatóriamente em um array bidmensional de 10x10 letras;
-// Gerar letras aleatórias para completar esse array bidmensional;
-// Informar ao usuário quando uma palavra for clicada(encontrada);
-
 // 1 - Definir um array de 20 palavras com menos de 10 letras cada;
 const arrayPalavras = [
     'osso',
@@ -67,6 +62,9 @@ function empurrar(palavra, x, y) {
 }
 
 let varControl = palavrasAleatorias(arrayPalavras);
+console.log(Object.values(varControl))
+console.log(varControl[0])
+
 
 function adicionarPalavras() {
 
@@ -110,29 +108,28 @@ function palavrasSelecionadas() {
 palavrasSelecionadas()
 
 const buildLinha = (linhaAtual, linha) => {
+
     for (let coluna = 0; coluna < linhaAtual.length; coluna++) {
 
         const valorAtual = linhaAtual[coluna];
 
         const div = document.createElement('div');
-        div.setAttribute('coluna', coluna);
-        div.setAttribute('linha', linha);
-        div.classList.add('divLetras')
         divContainer.appendChild(div);
 
         if (valorAtual === '') {
-            div.innerText = letras.split('')[Math.floor(Math.random() * letras.length)];
+            div.innerText = letras.split('')[Math.floor(Math.random() * letras.length)].toUpperCase();
 
         } else {
-            div.innerText = valorAtual;
+
+            div.classList.add('letrasCorretas');
+            div.innerText = valorAtual.toUpperCase();
+            div.setAttribute('coluna', coluna);
+            div.setAttribute('linha', linha);
+
             div.style.backgroundColor = 'red';
         }
-
-
-
-
-
     }
+
 
 }
 
@@ -147,24 +144,52 @@ buildMap();
 
 //5 - Informar ao usuário quando a palavra for clicada
 
+// const winGame = document.;
+// console.log(winGame)
+
+
+// const endGame = () => {
+
+
+
+// }
+
+
+
 const eventOnClick = (e) => {
+    // let lengthControl = varControl.toString().length - 2;
+    // console.log(lengthControl);
     const target = e.target;
-    const coluna = target.getAttribute('coluna');
-    const linha = target.getAttribute('linha');
-    if (target.classList.contains('divLetras')) {
-        target.style.backgroundColor = 'blue';
+    // counterClick();
+    if (target.classList.contains('letrasCorretas')) {
+        target.style.backgroundColor = 'lightgreen';
+
     }
+
+    let count = [];
+    count.push(1);
+    console.log(count);
+
+    // if (count === lengthControl) {
+    //     alert('Funcionou!')
+    // }
 
 }
 divContainer.addEventListener('click', eventOnClick);
 
-const eventWithoutClick = (e) => {
-    console.log(e)
-    const target = e.target;
-    if (target.classList.contains('divLetras')) {
-        target.style.backgroundColor = 'yellow';
-    }
+function counterClick(eventOnClick) {
+    const classControl = document.getElementsByClassName('letrasCorretas');
+    console.log(classControl);
+    classControl.forEach(element => {
+        element.addEventListener('click', eventOnClick);
 
+    });
+
+    // const target = e.target;
+    // for (let i = 0; i < lengthControl; i++) {
+    //     count += 1;
+    //     console.log(count);
+    // }
 }
-divContainer.removeEventListener('click', eventWithoutClick);
+
 
