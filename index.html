@@ -22,7 +22,7 @@
     <header class="topo-pagina">
         
         <img class="logo" src="./assets/img/GameKA2.png" alt="logo-ka-game">
-        <h1>Gaming Culture</h1>
+        <h1>Squad of five</h1>
         <p>Escolha um jogo abaixo e se divirta!</p>
 
         <input type="text" name="fullname" placeholder="Insira seu nome" id="input-cadastro">
@@ -34,7 +34,7 @@
             <div id="div-cacapalavras">
                 
                 <figure>
-                    <a href="./cacapalavras/cacapalavras.html" target="_blank">
+                    <a href="./cacapalavras/cacapalavras.html" target="_blank" onclick="document.getElementById('gameSelectAudio').play()">
                         <img class="jogo" src="./assets/img/Caça-palavras-logomario.png" class="media-object  img-responsive img-thumbnail">
                     </a>
                 </figure>
@@ -42,14 +42,16 @@
 
             <div id="div-joquem">
                 
-                <a href="//www.google.com">
+                <a href="//www.google.com" target="_blank" onclick="document.getElementById('gameSelectAudio').play()">
                     <img class="jogo" src="./assets/img/pedra-papel-tesoura.png" class="media-object  img-responsive img-thumbnail">
                 </a>
                 </figure>
             </div>
         </section>
+        <h5 class="audioText">Quer ouvir uma música de fundo?</h5>
         <div class="audio">
             <audio id="player" src="/assets/audio/Audio.mp3" preload="auto"></audio>
+            <audio id="gameSelectAudio" src="./assets/audio/SuperMarioBrothers-GoingDownPipe.wav"></audio>
             <div> 
              <button onclick="document.getElementById('player').play()" class="audio-button"><i class="far fa-play-circle"></i></button>
              <button onclick="document.getElementById('player').pause()" class="audio-button"><i class="far fa-pause-circle"></i></button> 
@@ -101,6 +103,7 @@
         
 
         </footer>
+        <script src="/script.js"></script>
         <script src="https://kit.fontawesome.com/6f6593dd57.js" crossorigin="anonymous"></script>
 </body>
 
