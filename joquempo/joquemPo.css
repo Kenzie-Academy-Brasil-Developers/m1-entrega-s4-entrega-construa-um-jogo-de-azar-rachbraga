@@ -1,0 +1,309 @@
+
+/* Divisões dom */
+.div-msn-wins{
+    max-width: 100%;
+}
+
+.section-intructions{
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+
+}
+.master .section-intructions{
+    max-width: 100%;
+    color: rgb(53, 51, 51);
+    font-weight: 550;
+    font-size: 8px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.master{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: rgba(172, 170, 170, 0.363) solid 4px;
+    padding: 10px;
+    background-color: rgb(186, 209, 58);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 750px;
+}
+
+.img-player-um{
+    width: 100%;
+}
+
+.img-player-ia{
+    width: 100%;
+    
+}
+.section-cards-1 .div-img-player-um{
+    width: 100%;
+    height: auto;
+}
+.section-cards-1 .div-img-player-ia{
+    width: 100%;
+    height: auto;
+}
+
+.master .section-msn-wins{
+    width: 100%;
+
+}
+
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(139, 153, 218, 0.8)),url(../assets/img/marioVsSonic.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+div{
+    margin: 5px;
+    border-radius: 15px;
+}
+.section-cards-1{
+    display: flex;
+    justify-content: center;
+}
+.section-msn-wins{
+    width: 710px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(250, 250, 250);
+}
+
+
+
+
+
+
+
+/* Divisões botões */
+
+.div-parent-botoes  .section-botoes{
+    max-width: 100%;
+}
+.div-parent-botoes  .section-botoes-players{
+    max-width: 100%;
+}
+
+.div-botoes .botoes{
+    max-width: 80px;
+    width: 100%;
+}
+.div-botoes-players .botoes{
+    max-width: 80px;
+    width: 100%;
+
+}
+
+
+.master .div-parent-botoes{
+    width: 100%;
+    display: flex;
+}
+
+.div-botoes{
+    display: flex;
+    box-shadow: none;
+    background-color: none;
+}
+
+.div-botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border-radius: 30;
+    box-shadow: rgba(0, 0, 0, 0.616) 5px 5px 5px 5px;
+    
+
+}
+
+.div-botoes-players{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100px; */
+    /* height: 100px; */
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.507) 5px 5px 5px 5px;
+
+}
+
+.section-botoes .div-botões img{
+    width: 100%;
+    height: auto;
+    border-radius: 30%;
+}
+.section-botoes-players img{
+    border-radius: 30%;
+}
+.section-botoes{
+    display: flex;
+}
+.section-botoes-players{
+    display: flex;
+}
+
+.div-botao-voltar{
+    width: 80px;
+    height: 80px;
+    align-self: flex-start;
+    background-color: rgb(186, 209, 58);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.753) 5px 5px 5px; 
+}
+.div-botao-voltar .img-botao-voltar{
+    max-width: 100%;
+}
+
+/* Divisão hovers */
+.div-botoes:hover{
+    box-shadow: rgba(5, 5, 5, 0.603) inset 5px 5px 5px 5px;
+    background-color: rgb(228, 49, 36);
+}
+.div-botoes-players:hover{
+    box-shadow: rgba(5, 5, 5, 0.589) inset 7px 7px 7px 7px;
+    opacity: 50%;
+}
+.div-botao-voltar:hover{
+    box-shadow: rgba(5, 5, 5, 0.589) inset 7px 7px 7px 7px;
+    background-color: rgb(228, 49, 36);  
+}
+
+
+@media (min-width: 100px){
+    .section-msn-wins{
+        font-size: 5px;
+    }
+    .master .section-intructions{
+        font-weight: 550;
+        font-size: 5px;
+    }
+    .div-botao-voltar{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (min-width: 200px){
+    .section-msn-wins{
+        font-size: 10px;
+    }
+    .master .section-intructions{
+        font-weight: 550;
+        font-size: 10px;
+    } 
+    .div-botao-voltar{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+@media (min-width: 300px){
+    .section-msn-wins{
+        font-size: 16px;
+    }
+    .master .section-intructions{
+        font-weight: 550;
+        font-size: 10px;
+    }
+    .div-botao-voltar{
+        width: 24px;
+        height: 24px;
+
+    }
+}
+
+@media (min-width: 400px){
+    .section-msn-wins{
+        font-size: 30px;
+    }
+    .master .section-intructions{
+        font-weight: 550;
+        font-size: 12px;
+    }
+    .div-botao-voltar{
+        width: 30px;
+        height: 30px;
+
+    }
+}
+
+@media (min-width: 400px){
+    .section-msn-wins{
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 500px){
+    .section-msn-wins{
+        font-size: 40px;
+    }
+    .master .section-intructions{
+        font-weight: 550;
+        font-size: 14px;
+    }
+    .div-botao-voltar{
+        width: 45px;
+        height: 45px;
+
+    }
+}
+
+@media (min-width: 600px){
+    .section-msn-wins{
+        font-size: 45px;
+    }
+    .div-botao-voltar{
+        width: 50px;
+        height: 50px;
+
+    }
+}
+
+@media (min-width: 700px){
+    .section-msn-wins{
+        font-size: 50px;
+    }
+    .div-botao-voltar{
+        width: 60px;
+        height: 60px;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
