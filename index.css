@@ -1,0 +1,141 @@
+body{
+    background: linear-gradient(rgba(230, 238, 240, 0.8),rgba(117, 136, 219, 0.8)),url(./assets/img/jogo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.topo-pagina {
+    text-align: center;
+    font-family:  'Roboto Condensed', sans-serif;
+
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    margin: 0;
+
+}
+h1{
+    font-size: 30px;
+    font-family: 'Open Sans Condensed';
+    margin-top: 0;
+    margin-bottom: 6px;
+
+}
+p{
+    font-size: 20px;
+    font-weight:lighter;
+    font-stretch: semi-expanded;
+    margin-top: 0;
+}
+#input-cadastro{
+    height: 35px;
+    width: 250px;
+    border: 1px solid rgb(73, 113, 150);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(39, 38, 38, 0.658);
+    background-color: rgb(122, 151, 204);
+    color:white;
+    text-align: center;
+    font-family:  'Roboto Condensed', sans-serif;
+    font-size: 15px;
+}
+
+#jogos{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.jogo{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 5px solid 	#3939db;
+    box-shadow: 3px 3px 3px 1px rgba(39, 38, 38, 0.658);
+}
+.jogo:hover{
+    border: 5px solid white;
+    max-zoom: 200px;
+}
+footer{
+    text-align: center;
+} 
+audio {
+    opacity: 70%;
+   
+}
+footer h3{
+    font-family:'Roboto Condensed', sans-serif; 
+    font-size: 15px;
+    font-weight: lighter;
+    color: darkslategrey;
+}
+footer ul{
+    display:flex;
+    justify-content: center;
+}
+footer ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 3px;    
+
+}
+.nome-dev {
+    display: none;
+}
+
+.imagem{
+    opacity: 40%;
+    margin: 0;
+}
+.imagem figcaption{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 8px;
+    font-weight: lighter;
+    color: rgb(3, 22, 39);
+    
+    
+}
+.imagem:hover{
+    opacity: 100%;
+}
+.devs img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;    
+    cursor: pointer;
+}
+
+@media (min-width:801px){
+    h1{
+        font-size: 50px;
+        font-family: 'Open Sans Condensed';
+        margin-top: 0;
+        margin-bottom: 6px;
+    
+    }
+    .jogo{
+        width: 300px;
+        height: 300px;
+        
+    }
+    .devs img{
+        display: block;
+        width: 60px;
+        height: 60px;
+       
+    }
+    .imagem{
+        margin: 4px;
+    }
+    .imagem figcaption{
+        font-size: 13px;
+}
+}

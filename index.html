@@ -5,36 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">   
+<link rel="shortcut icon" type="imagex/png" href="./assets/img/GameKA2.ico">
+ <link rel="stylesheet" href="index.css">
     <title>Kenzie Games</title>
 </head>
 
 <body>
-    <header>
+    <header class="topo-pagina">
+        
+        <img class="logo" src="./assets/img/GameKA2.png" alt="logo-ka-game">
+        <h1>Bem vindo ao Kenzie Game</h1>
+        <p>Escolha um jogo abaixo e se divirta!</p>
 
         <input type="text" name="fullname" placeholder="Insira seu nome" id="input-cadastro">
 
     </header>
     <main>  
 
-        <section>
+        <section id="jogos">
             <div id="div-cacapalavras">
-                <h2> Caça-Palavras</h2>
+                
                 <figure>
-                    <img src="" alt="Caça-palavras">
-                    <a href="./assets/img/"></a>
+                    <a href="./cacapalavras/cacapalavras.html" target="_blank">
+                        <img class="jogo" src="./assets/img/Caça-palavras-logo.png" class="media-object  img-responsive img-thumbnail">
+                    </a>
                 </figure>
             </div>
 
             <div id="div-joquem">
-                <h2> Joquempô</h2>
-                <figure>
-                    <img src="" alt="Pedra,papel,tesoura">
-                    <a href=""></a>
+                
+                <a href="//www.google.com">
+                    <img class="jogo" src="./assets/img/pedra-papel-tesoura.png" class="media-object  img-responsive img-thumbnail">
+                </a>
                 </figure>
             </div>
         </section>
 
     </main>
+    <footer> 
+        <audio autoplay="autoplay" src="./assets/Night Run Away - An Jone.mp3" controls="controls" loop="loop"></audio>
+        <h3>Develop by</h3>
+       <ul> 
+           <li class="devs" >       
+               <figure class="imagem">             
+             <img  src="./assets/img/diego.png" alt="Dev Diego">
+               <figcaption>Diego Bersilli,  </figcaption> 
+            </figure>     
+           </li>
+           <li class="devs" class="marcelo">
+               <figure class="imagem"> 
+                   <img  src="./assets/img/marcelo.png" alt="DEV Marcelo">
+                   <figcaption>Marcelo Alves,  </figcaption>
+               </figure>
+            </li>
+        </li>
+        <li class="devs" class="nieliton">     
+                <figure class="imagem"> 
+                    <img  src="./assets/img/nielito.png" alt="Dev Nieliton">
+                     <figcaption>Nieliton Souza, </figcaption>
+                </figure>
+            </li>     
+        </li>
+        <li class="devs" class="rachel">            
+                <figure class="imagem"> 
+                    <img  src="./assets/img/rachel.png" alt="Dev Rachel">
+                     <figcaption>Rachel Braga    e  </figcaption>
+                </figure>
+            </li>
+        </li>
+        <li class="devs" class="renan">            
+                <figure class="imagem"> 
+                    <img src="./assets/img/renan.png" alt="Dev Renan">
+                     <figcaption>Renan Ribeiro. </figcaption>
+                </figure> 
+        </li>
+
+       </ul>
+        
+
+        </footer>
 </body>
 
 </html>
