@@ -96,11 +96,23 @@ function palavrasSelecionadas() {
     const divMostrarPalavras = document.createElement('div');
     divMostrarPalavras.classList.add('mostrarPalavras');
     main.appendChild(divMostrarPalavras);
-    divMostrarPalavras.innerText = [
-        `Palavra 01: ${varControl[0].toUpperCase()}
-        Palavra 02: ${varControl[1].toUpperCase()}
-        Palavra 03: ${varControl[2].toUpperCase()}`
-    ]
+    const title = document.createElement('h2');
+    divMostrarPalavras.classList.add('divPalavras')
+    divMostrarPalavras.appendChild(title);
+    const frase1 = document.createElement('p');
+    divMostrarPalavras.appendChild(frase1);
+    frase1.innerText = varControl[0].toUpperCase();
+    const frase2 = document.createElement('p');
+    divMostrarPalavras.appendChild(frase2);
+    frase2.innerText = varControl[1].toUpperCase();
+    const frase3 = document.createElement('p');
+    divMostrarPalavras.appendChild(frase3);
+    frase3.innerText = varControl[2].toUpperCase();
+    // divMostrarPalavras.innerText = [
+    //     `Palavra 01: ${varControl[0].toUpperCase()}
+    //     Palavra 02: ${varControl[1].toUpperCase()}
+    //     Palavra 03: ${varControl[2].toUpperCase()}`
+    // ]
 
 }
 palavrasSelecionadas()
@@ -125,7 +137,7 @@ const buildLinha = (linhaAtual, linha) => {
             // div.setAttribute('coluna', coluna);
             // div.setAttribute('linha', linha);
 
-            div.style.backgroundColor = 'red';
+            // div.style.backgroundColor = 'red';
         }
     }
 
@@ -144,7 +156,9 @@ buildMap();
 //5 - Informar ao usuário quando a palavra for clicada
 
 let counter = 0;
-
+const divWinner = document.createElement('div');
+divWinner.classList.add('divWinner')
+main.appendChild(divWinner);
 const eventOnClick = (e) => {
     
     const target = e.target;
@@ -152,10 +166,11 @@ const eventOnClick = (e) => {
     
 
     if (target.classList.contains('letrasCorretas')) {
-        target.style.backgroundColor = 'lightgreen';
+        target.style.backgroundColor = 'orange';
+        
         counter++;
         if(lengthControl === counter){
-            alert('Você ganhou!')
+            divWinner.innerHTML = 'Você ganhou!'
         }
         
     }
