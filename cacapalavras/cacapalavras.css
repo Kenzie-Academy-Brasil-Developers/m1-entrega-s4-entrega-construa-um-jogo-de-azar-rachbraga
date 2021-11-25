@@ -114,7 +114,22 @@ header p{
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
 }
-
+.voltar {
+    height: 50px;
+  width: 250px;
+  border-radius: 20px;
+    box-shadow: 10px 10px 50px 10px;
+  background-color: rgba(238, 215, 12, 0.884);
+  
+}
+.voltar a{
+    text-decoration: none;
+    text-align: center;
+    font-family:  'Oswald', sans-serif;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 .hidden{
     display: none;
 }

@@ -233,6 +233,25 @@ const bottonReiniciar = document.querySelector("#img-botao-reiniciar")
 bottonReiniciar.addEventListener("click", reiniciar)
 
 
+function resetar(jogador, pc) {
+    if (jogador === 'pedra' && pc === 'pedra') {
+        imgPlayerUm.src = array[0]
+        imgPlayerIa.src = array[5]
+        playerUm.appendChild(imgPlayerUm)
+        playerIa.appendChild(imgPlayerIa)
+        playerIa.style.backgroundColor = "rgb(68, 175, 179)"
+        playerUm.style.backgroundColor = "rgb(68, 175, 179)"
+        divMsnWins.style.backgroundColor = "rgb(68, 175, 179)"
+        section.appendChild(playerUm)
+        section.appendChild(playerIa)
+        main.appendChild(section)
+        section2.appendChild(divMsnWins)
+        main.appendChild(section2)
+        master.appendChild(section)
+        master.appendChild(section2)
+        return divMsnWins.innerHTML = "Faça uma jogada"
+    }
+}
 
 
 
