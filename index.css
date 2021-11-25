@@ -106,6 +106,7 @@ footer ul li {
   display: none;
 }
 
+
 .imagem {
   opacity: 40%;
   margin: 0;
@@ -185,4 +186,6 @@ footer ul li {
     .imagem figcaption{
         font-size: 13px;
 }
+
 }
+
