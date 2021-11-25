@@ -12,6 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">   
 <link rel="shortcut icon" type="imagex/png" href="./assets/img/GameKA2.ico">
  <link rel="stylesheet" href="index.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Inter&display=swap" rel="stylesheet">
     <title>Kenzie Games</title>
 </head>
 
@@ -19,7 +22,7 @@
     <header class="topo-pagina">
         
         <img class="logo" src="./assets/img/GameKA2.png" alt="logo-ka-game">
-        <h1>Bem vindo ao Kenzie Game</h1>
+        <h1>Squad of five</h1>
         <p>Escolha um jogo abaixo e se divirta!</p>
 
         <input type="text" name="fullname" placeholder="Insira seu nome" id="input-cadastro">
@@ -31,57 +34,70 @@
             <div id="div-cacapalavras">
                 
                 <figure>
-                    <a href="./cacapalavras/cacapalavras.html" target="_blank">
-                        <img class="jogo" src="./assets/img/Caça-palavras-logo.png" class="media-object  img-responsive img-thumbnail">
+                    <a href="./cacapalavras/cacapalavras.html" target="_blank" onclick="document.getElementById('gameSelectAudio').play()">
+                        <img class="jogo" src="./assets/img/Caça-palavras-logomario.png" class="media-object  img-responsive img-thumbnail">
                     </a>
                 </figure>
             </div>
 
             <div id="div-joquem">
                 
-                <a href="//www.google.com">
+                <a href="//www.google.com" target="_blank" onclick="document.getElementById('gameSelectAudio').play()">
                     <img class="jogo" src="./assets/img/pedra-papel-tesoura.png" class="media-object  img-responsive img-thumbnail">
                 </a>
                 </figure>
             </div>
         </section>
+        <h5 class="audioText">Quer ouvir uma música de fundo?</h5>
+        <div class="audio">
+            <audio id="player" src="/assets/audio/Audio.mp3" preload="auto"></audio>
+            <audio id="gameSelectAudio" src="./assets/audio/SuperMarioBrothers-GoingDownPipe.wav"></audio>
+            <div> 
+             <button onclick="document.getElementById('player').play()" class="audio-button"><i class="far fa-play-circle"></i></button>
+             <button onclick="document.getElementById('player').pause()" class="audio-button"><i class="far fa-pause-circle"></i></button> 
+             <button onclick="document.getElementById('player').volume += 0.1" class="audio-button"><i class="fas fa-volume-up"></i></button> 
+             <button onclick="document.getElementById('player').volume -= 0.1" class="audio-button"><i class="fas fa-volume-down"></i></i></button> 
+            </div>
+            <!-- <audio src="/assets/audio/Audio.mp3" controls autoplay loop></audio> -->
+        </div>
 
     </main>
     <footer> 
-        <audio autoplay="autoplay" src="./assets/Night Run Away - An Jone.mp3" controls="controls" loop="loop"></audio>
-        <h3>Develop by</h3>
+
+        <h3 id="developers">Develop by</h3>
+
        <ul> 
            <li class="devs" >       
                <figure class="imagem">             
              <img  src="./assets/img/diego.png" alt="Dev Diego">
-               <figcaption>Diego Bersilli,  </figcaption> 
+               <figcaption>Diego Berselli  </figcaption> 
             </figure>     
            </li>
            <li class="devs" class="marcelo">
                <figure class="imagem"> 
                    <img  src="./assets/img/marcelo.png" alt="DEV Marcelo">
-                   <figcaption>Marcelo Alves,  </figcaption>
+                   <figcaption>Marcelo Alves  </figcaption>
                </figure>
             </li>
         </li>
-        <li class="devs" class="nieliton">     
+        <li class="devs" class="nieliton">
                 <figure class="imagem"> 
                     <img  src="./assets/img/nielito.png" alt="Dev Nieliton">
-                     <figcaption>Nieliton Souza, </figcaption>
+                     <figcaption>Nieliton Sousa</figcaption>
                 </figure>
             </li>     
         </li>
         <li class="devs" class="rachel">            
                 <figure class="imagem"> 
                     <img  src="./assets/img/rachel.png" alt="Dev Rachel">
-                     <figcaption>Rachel Braga    e  </figcaption>
+                     <figcaption>Rachel Braga</figcaption>
                 </figure>
             </li>
         </li>
         <li class="devs" class="renan">            
                 <figure class="imagem"> 
                     <img src="./assets/img/renan.png" alt="Dev Renan">
-                     <figcaption>Renan Ribeiro. </figcaption>
+                     <figcaption>Renan Ribeiro </figcaption>
                 </figure> 
         </li>
 
@@ -89,6 +105,8 @@
         
 
         </footer>
+        <script src="/script.js"></script>
+        <script src="https://kit.fontawesome.com/6f6593dd57.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
